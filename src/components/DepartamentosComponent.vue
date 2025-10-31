@@ -9,6 +9,7 @@
                 <th>Numero</th>
                 <th>Nombre</th>
                 <th>Localidad</th>
+                <th>Detalles</th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,9 @@
                 <td>{{ dept.numero }}</td>
                 <td>{{ dept.nombre }}</td>
                 <td>{{ dept.localidad }}</td>
+                <td><router-link :to="'/details/' + dept.numero + '/' + dept.nombre + '/' + dept.localidad" class="btn btn-outline-success">Detalles</router-link></td>
+                <td><router-link class="btn btn-outline-warning" :to="'/update/' + dept.numero">Modificar</router-link></td>
+                <td class="cerrar" v-on:click="borrarDepartamento(dept.numero)">X</td>
             </tr>
         </tbody>
     </table>
@@ -39,10 +43,19 @@ export default {
             this.departamentos = result;
             this.status = true;
         })
+    }, methods: {
+        borrarDepartamento(id) {
+            service.deleteDepartamento(id);
+            window.location.reload()
+        }
     }
 }
 </script>
 
 <style>
-
+    .cerrar:hover {
+        color: gray;
+        transition: 0.3s;
+        
+    }
 </style>

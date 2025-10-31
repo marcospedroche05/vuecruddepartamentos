@@ -23,7 +23,7 @@ export default {
         crearDepartamento(){
             service.insertDepartamento(this.departamento).then(result => {
                 console.log(result);
-                window.location.href = "/"
+                this.$router.push("/");
             })
         }
     }, data(){

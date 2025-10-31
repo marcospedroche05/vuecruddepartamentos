@@ -13,17 +13,6 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/create">Crear departamento</router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>  
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Link</a></li>
-            <li><a class="dropdown-item" href="#">Another link</a></li>
-            <li><a class="dropdown-item" href="#">A third link</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>
